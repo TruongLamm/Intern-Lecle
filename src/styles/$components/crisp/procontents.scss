@@ -1,0 +1,133 @@
+.procontents {
+    margin-bottom: rem(20);
+}
+
+.procontents-category {
+    background-color: $color-gray-9;
+    border-bottom: rem(2) solid $color-gray-10;
+}
+
+.procontents-category-menu {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(15) 0;
+    margin: 0 auto;
+    // Custom Button
+    background: none;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+
+    .menu-name {
+        font-family: $font-oswald;
+        font-size: rem(12);
+        font-weight: 500;
+        line-height: rem(20);
+        color: $color-black-3;
+    }
+}
+
+.procontents-icon-add,
+.procontents-icon-remove {
+    color: $color-gray-11;
+}
+
+.procontents-icon-remove {
+    display: none !important;
+}
+
+.procontents-list {
+    display: none;
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .procontents {
+        margin-bottom: rem(66);
+    }
+
+    .procontents-container {
+        padding: 0 rem(318) 0 rem(316);
+    }
+
+    .procontents-category {
+        border-bottom: none;
+        margin-bottom: rem(10);
+    }
+
+    .procontents-category-menu {
+        width: 97%;
+        padding: rem(20) 0;
+
+        .menu-name {
+            font-size: rem(24);
+            line-height: rem(34);
+        }
+    }
+
+    .procontents-category:first-child {
+        .procontents-icon-add {
+            display: none !important;
+        }
+
+        .procontents-icon-remove {
+            display: block !important;
+        }
+    }
+
+    .procontents-icon-add,
+    .procontents-icon-remove {
+        color: $color-gray-11;
+    }
+
+    .procontents-list {
+        display: flex;
+        padding-top: rem(32);
+        margin: 0 rem(29);
+        border-top: rem(1) solid $color-gray-12;
+        column-gap: rem(50);
+    }
+
+    .procontents-list-left {
+        width: 64%;
+    }
+
+    .procontents-list-title {
+        font-family: $font-oswald;
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: rem(25);
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: rem(5);
+    }
+
+    .procontents-list-content {
+        font-family: $font-roboto;
+        font-size: rem(14);
+        font-weight: 400;
+        line-height: rem(20);
+        color: $color-black-3;
+        margin-bottom: rem(15);
+    }
+
+    .procontents-list-ul {
+        margin: 0 0 rem(20);
+        padding-left: rem(16);
+
+        li {
+            list-style-type: disc;
+            font-family: $font-roboto;
+            font-size: rem(14);
+            font-weight: 400;
+            line-height: rem(20);
+            color: $color-black-3;
+        }
+    }
+
+    .procontents-list-right {
+        width: 63%;
+    }
+}

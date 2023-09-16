@@ -1,0 +1,254 @@
+.dasbmain .quickcontact-outside {
+    display: none;
+}
+
+.dsbmain-title {
+    display: none;
+}
+
+.dsbmain-container {
+    margin-bottom: rem(35);
+}
+
+.dsbmain-toggle-header {
+    background-color: $color-gray-10;
+    border: none;
+    padding: rem(6) rem(10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(18);
+}
+
+.dsbmain-toggle-select {
+    font-family: $font-oswald;
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: rem(34);
+    text-transform: uppercase;
+    color: $color-black-1;
+}
+
+.dsbmain-toggle-up,
+.dsbmain-toggle-down {
+    font-size: rem(10);
+}
+
+.dsbmain-toggle-up {
+    display: none !important;
+}
+
+.dsbmain-menu-ul {
+    display: none;
+}
+
+.dsbmain-info-title,
+.dsbmain-address-title {
+    font-family: $font-oswald;
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: rem(21);
+    color: $color-gray-11;
+    text-transform: uppercase;
+    margin-bottom: rem(6);
+    display: inline-block;
+}
+
+.dsbmain-address-title {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+}
+
+.info-contact-title,
+.info-news-title,
+.address-billing-title,
+.address-shipping-title {
+    font-family: $font-oswald;
+    font-size: rem(12);
+    font-weight: 400;
+    line-height: rem(24);
+    color: $color-black-1;
+    display: inline-block;
+    margin-bottom: rem(4);
+}
+
+.info-contact-name,
+.info-contact-email,
+.info-news-desc,
+.address-shipping-desc,
+.address-billing-desc {
+    font-family: $font-roboto;
+    font-size: rem(12);
+    font-weight: 400;
+    line-height: rem(16);
+    color: $color-gray-11;
+    display: block;
+    margin-bottom: rem(8);
+}
+
+.info-contact-name {
+    margin-bottom: 0;
+}
+
+.info-contact-edit,
+.info-contact-change,
+.dsbmain-address-edit,
+.info-news-edit,
+.address-billing-edit,
+.address-shipping-edit {
+    font-family: $font-roboto;
+    font-weight: 500;
+    font-size: rem(10);
+    line-height: rem(20);
+    background-color: $color-blue-2;
+    padding: rem(5) rem(10);
+    margin-right: rem(5);
+}
+
+.dsbmain-address-edit {
+    font-size: rem(9);
+    color: $color-black-1;
+    height: rem(20);
+    width: rem(20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dsbmain-info-contact,
+.dsbmain-info-news,
+.dsbmain-address-billing,
+.dsbmain-address-shipping {
+    margin-bottom: rem(20);
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .dasbmain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .quickcontact-outside {
+            display: block;
+        }
+    }
+
+    .dsbmain-container {
+        display: flex;
+        justify-content: space-between;
+        height: rem(716);
+        border: rem(1) solid $color-gray-12;
+        padding: rem(73) rem(212) rem(50) rem(212);
+        margin: 0 rem(212) rem(30) rem(212);
+    }
+
+    .dsbmain-title {
+        display: block;
+        font-family: $font-oswald;
+        font-size: rem(48);
+        font-weight: 400;
+        line-height: rem(60);
+        width: fit-content;
+        margin: rem(10) auto rem(20);
+    }
+
+    .dsbmain-toggle {
+        width: rem(288);
+    }
+
+    .dsbmain-toggle-header {
+        margin-bottom: rem(10);
+    }
+
+    .dsbmain-toggle-select {
+        font-size: rem(18);
+        text-transform: none;
+    }
+
+    .dsbmain-toggle-down {
+        display: none !important;
+    }
+
+    .dsbmain-menu-ul {
+        display: block;
+        margin: 0;
+        padding-left: rem(8);
+    }
+
+    .dsbmain-menu-li {
+        font-family: $font-oswald;
+        font-size: rem(18);
+        font-weight: 400;
+        line-height: rem(23);
+        color: $color-gray-11;
+        margin-bottom: rem(20);
+    }
+
+    .dsbmain-info-main {
+        display: flex;
+        column-gap: rem(145);
+        margin-bottom: rem(55);
+    }
+
+    .dsbmain-address-main {
+        display: flex;
+        column-gap: rem(50);
+    }
+    .dsbmain-info-title,
+    .dsbmain-address-title {
+        font-size: rem(24);
+        color: $color-black-1;
+        text-transform: none;
+        margin-bottom: rem(24);
+    }
+
+    .dsbmain-address-title {
+        column-gap: rem(15);
+    }
+
+    .info-contact-title,
+    .info-news-title,
+    .address-billing-title,
+    .address-shipping-title {
+        font-size: rem(18);
+        font-weight: 500;
+        line-height: rem(26);
+        color: $color-black-3;
+        text-transform: uppercase;
+        margin-bottom: rem(12);
+    }
+
+    .info-contact-email,
+    .info-news-desc,
+    .address-shipping-desc,
+    .address-billing-desc {
+        font-size: rem(16);
+        line-height: rem(20);
+        margin-bottom: rem(10);
+    }
+
+    .info-contact-edit,
+    .info-contact-change,
+    .dsbmain-address-edit,
+    .info-news-edit,
+    .address-billing-edit,
+    .address-shipping-edit {
+        font-size: rem(14);
+        line-height: rem(24);
+        margin-right: rem(10);
+    }
+
+    .dsbmain-address-edit {
+        height: rem(24);
+        width: rem(24);
+    }
+
+    .dsbmain-info-contact,
+    .dsbmain-info-news,
+    .dsbmain-address-billing,
+    .dsbmain-address-shipping {
+        margin-bottom: rem(20);
+    }
+}

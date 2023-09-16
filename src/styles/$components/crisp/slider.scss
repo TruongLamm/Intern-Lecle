@@ -1,0 +1,24 @@
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(15);
+    width: rem(15);
+}
+
+.slider-ele {
+    cursor: pointer;
+    width: rem(11);
+    height: rem(11);
+    background: transparent;
+    border: rem(1) solid $color-gray-11;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    &:hover {
+        box-sizing: content-box;
+        background: $color-black-1;
+        border: rem(2) solid $color-black-1;
+        margin: 0;
+    }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/NigelOToole/progress-tracker@v2.0.6/docs/styles/progress-tracker.css">
+     
+    
+    <!-- Start: Meta Keys -- request IT for provide a Test key.-->
+    <meta name="map-key" content="">
+    <!-- End: Keys-->
+    
+     
+    
+    <!-- Start: Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End: Favicon-->
+    
+     
+    <link rel="stylesheet" href="../css/styles.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/vs2015.min.css">
+    <style>
+      .component-container {
+        max-width: 1600px;
+        padding: 0 4rem;
+        margin: 0 auto;
+      }
+      
+      @media screen and (min-width: 992px) {
+        .component-container {
+          padding: 0 4rem;
+        }
+      }
+      
+      .component-dev {
+        counter-reset: count;
+        padding: 1rem;
+        margin-bottom: 5rem;
+      }
+      
+      .component-dev > .title,
+      .component-dev > .block > .sub-title {
+        line-height: 1.1;
+        letter-spacing: 0;
+        font-weight: bold;
+      }
+      
+      .component-dev > .title {
+        font-size: 2em;
+        margin-bottom: 20px;
+        border-left: 10px solid currentColor;
+        padding-left: 10px;
+      }
+      
+      .component-dev > .block {
+        margin-top: 20px;
+      }
+      
+      .component-dev > .block > .sub-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      
+      .component-dev .section.\--custom-height {
+        height: 35vh;
+      }
+      
+      .component-dev > .block > .sub-title:before {
+        counter-increment: count;
+        content: counter(count) ". ";
+      }
+      
+      .component-dev > .block > .code-frame {
+        position: relative;
+        font-family: Consolas, monospace;
+        font-size: 16px;
+        z-index: 1;
+        overflow: auto;
+      }
+      
+      .component-dev > .block > .code-frame > textarea {
+        width: 100%;
+        height: 300px;
+      }
+      
+      .component-dev > .block > .code-frame > code {
+        padding: 20px;
+      }
+      
+      .component-dev > .block > .block-demo {
+        border: 1px dashed rgba(255, 0, 0, 0.3);
+      }
+      
+      .component.complete > .block > .block-demo {
+        border-color: rgba(5, 70, 22, 0.3);
+      }
+      
+      .component-dev .color-block {
+        width: 100%;
+        height: 150px;
+        border: 3px solid #c3c3c3;
+      }
+      
+      .component-dev .demo-ico em[class^="ico"],
+      .component-dev .demo-ico em.fa {
+        color: #c9ba9e;
+        font-size: 20px;
+      }
+      
+    </style>
+    <script>
+      var data_filter = '{"price_config":{"min":"0","max":"10000"},"price_filter":[],"date_filter":null}';
+      
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.5/beautify-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/htmlbars.min.js"></script>
+    <script>
+      document.querySelectorAll(".code-frame textarea").forEach(function (element) {
+        var pre = document.createElement("pre");
+        var code = document.createElement("code");
+        var preCode = element.value.trim().replace(/"\{/g, "'{").replace(/"\[/g, "'[").replace(/\}"/g, "}'").replace(/\]"/g, "]'");
+      
+        var html = html_beautify(preCode, {
+          indent_size: 4,
+          indent_char: " ",
+          break_chained_methods: true,
+        });
+      
+        code.innerText = html;
+      
+        code.classList.add("html");
+        pre.appendChild(code);
+        element.insertAdjacentElement("afterend", pre);
+        element.parentElement.removeChild(element);
+      });
+      
+      hljs.highlightAll();
+      
+    </script>
+  </head>
+  <body>
+    <main role="main">
+      <div class="component-container">
+        <div class="component-dev">
+          <h1 class="h1 title">Home</h1>
+          <div class="block">
+            <h2 class="sub-title">Demo</h2>
+            <div class="block-demo">
+              <div class="home-page container">
+                <div class="row">
+                  <div class="offset-lg-2">
+                    <h1>Lecle VietNam!</h1>
+                    <div class="desc">
+                      <p>WELCOME,</p><br>
+                      <p>We’re tech experts who explore problems then create the valuable experience and commitment products for clients.</p>
+                    </div><a class="button button--primary" href="#" title="Back to homepage">Back to homepage</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <h2 class="sub-title">Code Frame</h2>
+            <div class="code-frame">
+              <textarea>
+                <div class="home-page container">
+                  <div class="row">
+                    <div class="offset-lg-2">
+                      <h1>Lecle VietNam!</h1>
+                      <div class="desc">
+                        <p>WELCOME,</p><br>
+                        <p>We’re tech experts who explore problems then create the valuable experience and commitment products for clients.</p>
+                      </div><a class="button button--primary" href="#" title="Back to homepage">Back to homepage</a>
+                    </div>
+                  </div>
+                </div></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>var staticJsAssetsPath = "../js/";
+      
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.5/beautify-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/htmlbars.min.js"></script>
+    <script>
+      document.querySelectorAll(".code-frame textarea").forEach(function (element) {
+        var pre = document.createElement("pre");
+        var code = document.createElement("code");
+        var preCode = element.value.trim().replace(/"\{/g, "'{").replace(/"\[/g, "'[").replace(/\}"/g, "}'").replace(/\]"/g, "]'");
+      
+        var html = html_beautify(preCode, {
+          indent_size: 4,
+          indent_char: " ",
+          break_chained_methods: true,
+        });
+      
+        code.innerText = html;
+      
+        code.classList.add("html");
+        pre.appendChild(code);
+        element.insertAdjacentElement("afterend", pre);
+        element.parentElement.removeChild(element);
+      });
+      
+      hljs.highlightAll();
+      
+    </script>
+    <script src="../js/scripts.min.js"></script>
+  </body>
+</html>

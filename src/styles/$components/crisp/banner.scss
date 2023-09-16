@@ -1,0 +1,111 @@
+.banner {
+    position: relative;
+    height: 100%;
+}
+
+.banner-background {
+    position: absolute;
+    z-index: 1;
+    width: 76.2%;
+    height: inherit;
+    background: linear-gradient(90deg, #f6f8fc 0%, #f6f8fc 44.79%, #f5f7fa 74.48%, rgba(243, 239, 238, 0) 100%);
+}
+
+.banner-content {
+    position: absolute;
+    z-index: 3;
+    top: 12%;
+    left: 7%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(10) 0;
+}
+
+.banner-title {
+    border: 0;
+    width: 67%;
+}
+
+.banner-title-name {
+    font-family: $font-oswald;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(19);
+    text-transform: uppercase;
+    border: 0;
+    padding: 0;
+    margin: 0 0 rem(3) 0;
+}
+
+.banner-title-desc {
+    font-family: $font-roboto;
+    font-weight: 300;
+    font-size: rem(10);
+    line-height: rem(13);
+    letter-spacing: rem(0.1);
+
+    span {
+        display: none;
+    }
+}
+
+.banner-image {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    width: 44.6%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .banner {
+        height: 100%;
+    }
+
+    .banner-background {
+        height: inherit;
+    }
+
+    .banner-content {
+        top: 18%;
+        left: 17%;
+        gap: rem(30) 0;
+
+        .btn-custom {
+            margin-left: rem(-38);
+        }
+    }
+
+    .banner-title {
+        border-top: rem(2) solid $color-black-1;
+        width: 39%;
+    }
+
+    .banner-title-name {
+        font-family: $font-oswald;
+        font-size: rem(56);
+        line-height: rem(72);
+        border-right: rem(2) solid $color-black-1;
+        padding-top: rem(19);
+        margin: 0 0 rem(17) rem(-38);
+    }
+
+    .banner-title-desc {
+        font-size: rem(25);
+        line-height: rem(37);
+
+        span {
+            display: inline;
+        }
+    }
+
+    .banner-image {
+        position: absolute;
+        z-index: 0;
+        width: 44.6%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

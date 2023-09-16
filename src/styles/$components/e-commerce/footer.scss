@@ -1,0 +1,294 @@
+.footer {
+  width: 100%;
+  // margin-bottom: rem(90);
+  background: linear-gradient(101.28deg, $color-black-1 0%, $color-black-1 100%);
+
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: 0;
+  }
+
+  &.footer-bkg-purple {
+    background-image: linear-gradient(145.59deg, $color-black-1 0%, $color-black-1 100%);
+  }
+
+  a {
+    color: $color-black-1;
+    text-decoration: none;
+  }
+
+  &__title {
+    font-family: $font-opensans;
+    font-size: rem(14);
+    line-height: rem(19);
+    font-weight: bold;
+    margin: 0 0 rem(10);
+
+    @include mq($BREAKPOINT-MD) {
+      margin: 0 0 rem(18);
+    }
+
+    @include mq($BREAKPOINT-LG) {
+      margin: 0 0 rem(18);
+    }
+  }
+
+  &__container {
+    max-width: rem(1704);
+    box-sizing: content-box;
+    padding: rem(10) rem(10) rem(20);
+    margin: auto;
+
+    @include mq($BREAKPOINT-MD) {
+      padding: rem(20) rem(20) rem(30);
+    }
+
+    @include mq($BREAKPOINT-XL) {
+      padding: rem(40) rem(40) rem(30);
+    }
+  }
+
+  &__wrapper {
+    border-radius: rem(10);
+    padding: rem(20) rem(20) rem(31);
+    background: $color-white-1;
+
+    @include mq($BREAKPOINT-MD) {
+      padding: rem(17) rem(22) rem(30);
+    }
+
+    @include mq($BREAKPOINT-LG) {
+      padding: rem(50) 5.9%;
+    }
+  }
+
+  &__top {
+    @include mq($BREAKPOINT-LG) {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: rem(80);
+    }
+
+    @include mq($BREAKPOINT-XL) {
+      padding-right: 6.5%;
+    }
+  }
+
+  &__logo {
+    width: rem(160);
+
+    @include mq($BREAKPOINT-MD) {
+      width: rem(200);
+    }
+
+    @include mq($BREAKPOINT-LG) {
+      margin-right: rem(10);
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(34);
+    margin-bottom: 0;
+
+    @include mq($BREAKPOINT-MD) {
+      margin-bottom: rem(21);
+      margin-top: rem(39);
+    }
+
+    @include mq($BREAKPOINT-LG) {
+      margin-top: rem(7);
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    //footer__link-list
+    &-list {
+      font-family: $font-opensans;
+      font-size: rem(14);
+      line-height: rem(19);
+      font-weight: 400;
+      padding: 0;
+      list-style: none;
+      order: 1;
+      width: 50%;
+      margin: 0 0 rem(35);
+
+      &:first-child,
+      &:last-child {
+        order: 0;
+      }
+
+      @include mq($BREAKPOINT-MD) {
+        width: 33.33%;
+        // font-size: rem(16);
+        // line-height: rem(24);
+        order: 0;
+      }
+
+      @include mq($BREAKPOINT-LG) {
+        font-size: rem(16);
+        line-height: rem(24);
+        width: 21%;
+        margin-bottom: 0;
+      }
+
+      @include mq($BREAKPOINT-XL) {
+        font-size: rem(16);
+        line-height: rem(24);
+      }
+
+      li {
+        display: block;
+
+        & + li {
+          margin-top: rem(15);
+
+          @include mq($BREAKPOINT-MD) {
+            margin-top: rem(17);
+          }
+        }
+      }
+    }
+
+    a {
+      transition: all 0.3s ease;
+      letter-spacing: rem(-0.2);
+
+      &:hover {
+        color: $color-black-1;
+      }
+    }
+  }
+
+  //.footer__bottom
+  &__bottom {
+    border-top: rem(1) solid $color-black-1;
+    padding-top: rem(35);
+
+    @include mq($BREAKPOINT-MD) {
+      padding-top: rem(35);
+    }
+  }
+
+  //.footer__company
+  &__company {
+    @include mq($BREAKPOINT-LG) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    //footer__company-logo
+    &-logo {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      @include mq($BREAKPOINT-MD) {
+        margin: 0 rem(-23);
+      }
+
+      @include mq($BREAKPOINT-LG) {
+        justify-content: center;
+      }
+
+      li {
+        padding: 0 rem(10);
+
+        @include mq($BREAKPOINT-MD) {
+          padding: 0 rem(23);
+        }
+
+        // &+li {
+        //   padding-left: rem(15);
+
+        //   @include mq($BREAKPOINT-LG) {
+        //     padding-left: 0;
+        //   }
+        // }
+
+        a {
+          transition: all 0.2s ease-in;
+
+          @include mq($BREAKPOINT-MD) {
+            display: flex;
+            align-items: center;
+            height: rem(70);
+          }
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      img {
+        max-width: rem(108);
+        width: 100%;
+
+        @include mq($BREAKPOINT-MD) {
+          max-width: rem(120);
+        }
+      }
+    }
+
+    //footer__company-item
+    &-item {
+      @include mq($BREAKPOINT-LG) {
+        padding: 0 rem(30);
+        text-align: center;
+      }
+
+      & + & {
+        margin-top: rem(34);
+
+        @include mq($BREAKPOINT-MD) {
+          margin-top: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        img {
+          width: rem(180);
+          max-width: 100%;
+        }
+      }
+
+      &:nth-child(3) {
+        @include mq($BREAKPOINT-MD) {
+          width: 100%;
+          margin-top: rem(19);
+        }
+
+        @include mq($BREAKPOINT-LG) {
+          width: auto;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  //.footer__copyright
+  &__copyright {
+    display: block;
+    font-family: $font-opensans;
+    font-weight: 400;
+    color: $color-white-1;
+    font-size: rem(13);
+    line-height: rem(16);
+    padding-top: rem(20);
+    padding-left: rem(13);
+
+    @include mq($BREAKPOINT-MD) {
+      padding-left: 0;
+    }
+
+    @include mq($BREAKPOINT-LG) {
+      padding-top: rem(30);
+    }
+  }
+}

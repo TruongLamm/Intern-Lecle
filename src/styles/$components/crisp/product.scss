@@ -1,0 +1,100 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(18) rem(14);
+    justify-content: center;
+    margin: rem(14) 0 rem(18) 0;
+}
+
+.product-filter {
+    display: none;
+}
+
+.product-banner {
+    color: $color-white-1;
+    height: rem(126);
+
+    .banner-background {
+        width: 65%;
+        background: linear-gradient(90deg, #000000 0%, #000000 69.37%, #000000 89.11%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .btn {
+        color: $color-white-1;
+        border: rem(1.5) solid $color-white-1;
+    }
+}
+
+@include mq($BREAKPOINT-DT-FULL) {
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border-left: rem(1) solid $color-gray-12;
+    }
+
+    .product-list {
+        gap: rem(41) rem(26);
+        justify-content: flex-end;
+        margin: rem(20) 0 rem(44) 0;
+    }
+
+    .product-filter {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0 rem(20);
+        // Custom Button
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .product-filter-price,
+    .product-filter-size {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: rem(255);
+        border: rem(1) solid $color-gray-12;
+        padding: rem(11);
+    }
+
+    .product-filter-size {
+        width: rem(69);
+    }
+
+    .product-filter-select {
+        font-family: $font-oswald;
+        font-size: rem(14);
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-black-1;
+    }
+
+    // Sidebar on mobile
+    .product-filter-up {
+        color: $color-white-1 !important;
+        font-size: rem(10);
+        display: none !important;
+    }
+
+    .product-filter-down {
+        color: $color-black-1 !important;
+        font-size: rem(10);
+    }
+
+    .product-banner {
+        height: rem(430);
+        margin-left: 0.7%;
+
+        .banner-title {
+            border-top: rem(2) solid $color-white-1;
+            width: 51%;
+        }
+        .banner-title-name {
+            border-right: rem(2) solid $color-white-1;
+        }
+    }
+}

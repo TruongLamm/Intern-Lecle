@@ -1,0 +1,355 @@
+-
+    const rentalDataBrand = [
+        {
+            checkboxId: "brandName1",
+            checkboxName: "brandName1",
+            checkboxValue: "brandName",
+            cardLable: "State",
+        },
+        {
+            checkboxId: "brandName2",
+            checkboxName: "brandName2",
+            checkboxValue: "brandName",
+            cardLable: "Cooper",
+        },
+        {
+            checkboxId: "brandName3",
+            checkboxName: "brandName3",
+            checkboxValue: "brandName",
+            cardLable: "Bardot",
+        },
+        {
+            checkboxId: "brandName4",
+            checkboxName: "brandName4",
+            checkboxValue: "brandName",
+            cardLable: "Alfani",
+        },
+        {
+            checkboxId: "brandName5",
+            checkboxName: "brandName5",
+            checkboxValue: "brandName",
+            cardLable: "Cace",
+        },
+        {
+            checkboxId: "brandName6",
+            checkboxName: "brandName6",
+            checkboxValue: "brandName",
+            cardLable: "Donna Ricco",
+        },
+    ]
+
+    const rentalDataSize = [
+        {
+            sizeValue: "osfa",
+        }, 
+        {
+            sizeValue: "w26",
+        }, 
+        {
+            sizeValue: "w27",
+        }, 
+        {
+            sizeValue: "w28",
+        }, 
+        {
+            sizeValue: "w29",
+        }, 
+        {
+            sizeValue: "w30",
+        }, 
+        {
+            sizeValue: "w31",
+        }, 
+        {
+            sizeValue: "w32",
+        }, 
+        {
+            sizeValue: "w33",
+        }, 
+        {
+            sizeValue: "w34",
+        }, 
+        {
+            sizeValue: "w35",
+        }, 
+        {
+            sizeValue: "w36",
+        }, 
+        {
+            sizeValue: "w38",
+        }, 
+        {
+            sizeValue: "w40",
+        }, 
+        {
+            sizeValue: "w42",
+        }, 
+        {
+            sizeValue: "w44",
+        }, 
+        {
+            sizeValue: "w46",
+        }, 
+        {
+            sizeValue: "w48",
+        }, 
+        {
+            sizeValue: "w50",
+        }, 
+        {
+            sizeValue: "w52",
+        }, 
+    ]
+
+    const rentalDataDressLength = [
+        {
+            checkboxId: "dressLengName1",
+            checkboxName: "dressLengName1",
+            checkboxValue: "dressLeng",
+            cardLable: "Short",
+        },
+        {
+            checkboxId: "dressLengName2",
+            checkboxName: "dressLengName2",
+            checkboxValue: "dressLeng",
+            cardLable: "Knee Length",
+        },
+        {
+            checkboxId: "dressLengName2",
+            checkboxName: "dressLengName3",
+            checkboxValue: "dressLeng",
+            cardLable: "Hight Low",
+        },
+        {
+            checkboxId: "dressLengName4",
+            checkboxName: "dressLengName4",
+            checkboxValue: "dressLeng",
+            cardLable: "Long",
+        },
+        {
+            checkboxId: "dressLengName5",
+            checkboxName: "dressLengName5",
+            checkboxValue: "dressLeng",
+            cardLable: "Midi",
+        },
+    ]
+
+    const rentalDataColor = [
+        {
+            colorAttribute: "color1",
+        }, 
+        {
+            colorAttribute: "color2",
+        }, 
+        {
+            colorAttribute: "color3",
+        }, 
+        {
+            colorAttribute: "color4",
+        }, 
+        {
+            colorAttribute: "color5",
+        }, 
+        {
+            colorAttribute: "color6",
+        }, 
+        {
+            colorAttribute: "color7",
+        }, 
+        {
+            colorAttribute: "color8",
+        }, 
+        {
+            colorAttribute: "color9",
+        }, 
+        {
+            colorAttribute: "color10",
+        }, 
+        {
+            colorAttribute: "color11",
+        }, 
+        {
+            colorAttribute: "color12",
+        },
+    ]
+
+<section class="filter">
+    <div class="filter-container">
+        <div class="filter-toggle">
+            <div class="filter-toggle-header">
+                <p class="filter-toggle-name">Filter</p>
+                <div>
+                    <i class="fa-sharp fa-solid fa-chevron-up filter-toggle-up"></i>
+                    <i class="fa-sharp fa-solid fa-chevron-down filter-toggle-down"></i>
+                </div>
+                <a class="filter-reset">
+                    <i class="fa-sharp fa-solid fa-xmark filter-toggle-reset"></i> 
+                    <span>Reset all</span>
+                </a>
+            </div>
+            <div class="filter-clarify">
+                //- Filter Branch
+                <div class="filter-branch">
+                    <p class="filter-clarify-name">Brand:</p>
+                    <div class="filter-list">
+                        <a>
+                            <i class="fa-sharp fa-solid fa-xmark filter-toggle-reset"></i> 
+                            <span>Bardot</span>
+                        </a>
+                        <a>
+                            <i class="fa-sharp fa-solid fa-xmark filter-toggle-reset"></i> 
+                            <span>Bardot</span>
+                        </a>
+                    </div>
+                </div>
+                //- filter Size (Inches):
+                <div class="filter-size">
+                    <p class="filter-clarify-name">Size (Inches):</p>
+                    <div class="filter-list">
+                        <a>
+                            <i class="fa-sharp fa-solid fa-xmark filter-toggle-reset"></i> 
+                            <span>W32</span>
+                        </a>
+                    </div>
+                </div>
+                //- Dress length:
+                <div class="filter-dress-length">
+                    <p class="filter-clarify-name">Dress length:</p>
+                    <div class="filter-list">
+                        <a>
+                            <i class="fa-sharp fa-solid fa-xmark filter-toggle-reset"></i> 
+                            <span>Hight Low</span>
+                        </a>
+                    </div>
+                </div>
+                //- Color:
+                <div class="filter-color">
+                    <p class="filter-clarify-name">Color:</p>
+                    <div class="filter-list">
+                        <a class="filter-list-color">
+                            <i class="fa-sharp fa-solid fa-xmark filter-toggle-reset"></i> 
+                            +color-card({}, "color4")
+                        </a>
+                    </div>
+                </div>
+                //- Price Range:
+                <div class="filter-price">
+                    <p class="filter-clarify-name">Price Range:</p>
+                    <div class="filter-list">
+                        <a>
+                            <i class="fa-sharp fa-solid fa-xmark filter-toggle-reset"></i> 
+                            <span>Bardot</span>
+                        </a>
+                        <a>
+                            <i class="fa-sharp fa-solid fa-xmark filter-toggle-reset"></i> 
+                            <span>Bardot</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="filter-sidebar">
+            //- <!-- Brand -->
+            <li class="filter-category">
+                <button class="filter-category-menu">
+                    <p class="menu-name">Brand</p>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-minus menu-icon-add"></i>
+                        <i class="fa-sharp fa-solid fa-plus menu-icon-remove"></i>
+                    </div>
+                </button>
+                <ul class="menu-list">
+                    each item in rentalDataBrand
+                        +checkbox-card(item)
+                </ul>
+            </li>
+            //- <!-- Size -->
+            <li class="filter-category">
+                <button class="filter-category-menu">
+                    <p class="menu-name">Size (Inches)</p>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-minus menu-icon-add"></i>
+                        <i class="fa-sharp fa-solid fa-plus menu-icon-remove"></i>
+                    </div>
+                </button> 
+                <div class="filter-size-list">
+                    each item in rentalDataSize
+                        +size-card(item)
+                </div>
+            </li>
+            //- <!-- Dress length 1 -->
+            <li class="filter-category filter-category-display">
+                <button class="filter-category-menu">
+                    <p class="menu-name">Dress length</p>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-minus menu-icon-add"></i>
+                        <i class="fa-sharp fa-solid fa-plus menu-icon-remove"></i>
+                    </div>
+                </button>
+                <ul class="menu-list">
+                    each item in rentalDataDressLength
+                        +checkbox-card(item)
+                </ul>
+            </li>
+            //- <!-- Color -->
+            <li class="filter-category">
+                <button class="filter-category-menu">
+                    <p class="menu-name">Color</p>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-minus menu-icon-add"></i>
+                        <i class="fa-sharp fa-solid fa-plus menu-icon-remove"></i>
+                    </div>
+                </button>
+                <div class="filter-color-list">
+                    each item in rentalDataColor
+                        +color-card(item)
+                </div>
+            </li>
+            //- <!-- Price Range -->
+            <li class="filter-category">
+                <button class="filter-category-menu">
+                    <p class="menu-name">Price Range</p>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-minus menu-icon-add"></i>
+                        <i class="fa-sharp fa-solid fa-plus menu-icon-remove"></i>
+                    </div>
+                </button> 
+                <div class="filter-price-input">
+                    <div class="filter-price-field">
+                        <input type="number" class="price-value-min" min="0" max="250" value="0.00">
+                        <span class="price-unit">Eur</span>
+                    </div>
+                    <div class="filter-price-field">
+                        <input type="number" class="price-value-max" min="0" max="250" value="250.00">
+                        <span class="price-unit">Eur</span> 
+                    </div>
+                </div>
+                <div class="filter-price-slider">
+                    <div class="price-progress"></div>
+                </div>
+                <div class="filter-price-range">
+                    <input type="range" class="range-min" min="0" max="250" value="0">
+                    <input type="range" class="range-max" min="0" max="250" value="140">
+                </div>
+                +button("Apply")
+            </li>
+            //- <!-- Dress Length 2 -->
+            <li class="filter-category">
+                <button class="filter-category-menu">
+                    <p class="menu-name">Dress Length</p>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-minus menu-icon-add"></i>
+                        <i class="fa-sharp fa-solid fa-plus menu-icon-remove"></i>
+                    </div>
+                </button> 
+            </li>
+            //- <!-- About Dresses -->
+            <li class="filter-category filter-category-display">
+                <button class="filter-category-menu">
+                    <p class="menu-name">About Dresses</p>
+                </button> 
+                <p class="filter-about">Every day we’re gonna be dropping the latest trends to help you nail every Summer sitch. Whether it’s a graduation, your mate's wedding, or just a cute day at the races with the gals, our occasion dresses have got you covered. Not looking for something fancy? No stress. We’ve got day dresses for days (aka bodycon dresses, t-shirt dresses, oversized shirt dresses).</p>
+            </li>
+        </ul>
+    </div>
+</section>

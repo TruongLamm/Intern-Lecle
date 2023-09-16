@@ -1,0 +1,37 @@
+.artcontents {
+    margin: rem(25) 0 rem(50);
+}
+
+.artcontents-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 rem(336) 0 rem(328);
+}
+
+.artcontents-main {
+    width: 78%;
+    margin-right: rem(99);
+}
+
+.artcontents-title {
+    font-family: $font-oswald;
+    font-weight: 400;
+    font-size: rem(32);
+    line-height: rem(34);
+    margin: rem(25) 0;
+    display: inline-block;
+}
+
+.artcontents-content {
+    font-family: $font-roboto;
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(30);
+    color: $color-black-3;
+    margin-bottom: rem(28);
+    display: inline-block;
+}
+
+.artcontents-adver {
+    margin-top: rem(50);
+}

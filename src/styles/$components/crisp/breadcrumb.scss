@@ -1,0 +1,49 @@
+.breadcrumb {
+    font-family: $font-roboto;
+    font-size: rem(10);
+    font-weight: 400;
+    line-height: rem(50);
+    color: $color-gray-11;
+
+    a,
+    a:link,
+    a:visited {
+        color: $color-gray-11;
+        transition: color 1s;
+    }
+
+    a:hover,
+    a:active {
+        color: rgb(20, 20, 20);
+    }
+}
+
+.breadcrumb ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.breadcrumb li {
+    display: inline-block;
+}
+
+.breadcrumb li + li::before {
+    content: "";
+    display: inline-block;
+    margin: 0 rem(3);
+    transform: rotate(15deg);
+    border-right: rem(1) solid $color-gray-11;
+    height: rem(8);
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .breadcrumb {
+        font-size: rem(14);
+    }
+
+    .breadcrumb li + li::before {
+        height: rem(12);
+    }
+}

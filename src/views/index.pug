@@ -1,0 +1,12 @@
+extends _layouts/layout
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Home";
+  - useHeader = false
+  - useFooter = false
+
+block container
+  //- .page-container
+  //-   +breadcrumb([{text: "Home"}])
+  //- include ./$components/home
+  //- p(style="margin-bottom: 120px")

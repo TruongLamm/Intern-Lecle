@@ -1,0 +1,48 @@
+header.header.sticky-top
+  .header__wrapper(data-menu)
+    +link('index.html', 'index').header__logo
+      +img('images/logo.png', 'index')
+    +link('index.html', 'index').header__logo.header__logo-sticky
+      +img('images/logo-sticky.png', 'index')
+    .header
+      .header__mobile
+        .header__mobile-back
+          +link("#", "Back").header__mobile-back-link
+        .header__mobile-close
+      .header__top
+        ul.header__top-nav
+          li: +link('#', 'Home')
+          li: +link('#', 'Carrers')
+          li: +link('#', 'Contact us')
+      .header__bottom
+        include navbar
+        .header__search.search
+          .search__icon
+            span.search__icon-search.search__icon-img Search
+            span.search__icon-close.search__icon-img Close
+          form.search__form(autocomplete="off", novalidate="novalidate")
+            input.search__form-input(type="text", placeholder="Search", spellcheck="false")
+            .search__form-clear
+              +img('images/icons/icon-close-black.svg', "Close Icon").search__icon-clear
+            button.search__form-submit
+              +img('images/icons/icon-search-black.svg', "Search Icon").search__form-btn
+        .header__button
+          button.btn-book!= "Contact Now"
+          .find-play
+            +link('https://lecle.vn/', 'Contact').book-link
+            +link('#', 'Contact Events').book-link
+    .header__tools
+      ul.header__tools-list
+        li
+          .header__tools-book
+            span.header__tools-text Contact Now
+        li
+          +link('#', 'Getting Here').header__tools-location
+            span.header__tools-text Getting Here
+        li
+          +link('#', 'search').search-mobile
+            span.search-mobile__icon-search Search
+            span.search-mobile__icon-close Close
+        li
+          button.header__burger
+            span.header__burger-icon

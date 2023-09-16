@@ -1,0 +1,18 @@
+.banner-catalog {
+    margin-bottom: rem(9);
+}
+
+.banner-catalog-container {
+    height: rem(120);
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .banner-catalog {
+        margin-bottom: rem(18);
+    }
+
+    .banner-catalog-container {
+        height: rem(467);
+    }
+}

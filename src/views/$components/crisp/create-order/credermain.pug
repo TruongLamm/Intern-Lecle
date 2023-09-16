@@ -1,0 +1,88 @@
+-
+    const rentalDataItem = [
+        {
+            imgSrc: "/images/crisp/item-1.png",
+            imgAlt: "item-1.png",
+            title: "Angels malu zip jeans slim black used",
+            qtyContent: "QTY:",
+            qtyValue: "1",
+            detail: "View details",
+            price: "129.00 EUR",
+        },
+        {
+            imgSrc: "/images/crisp/item-1.png",
+            imgAlt: "item-1.png",
+            title: "Angels malu zip jeans slim black used",
+            qtyContent: "QTY:",
+            qtyValue: "1",
+            detail: "View details",
+            price: "129.00 EUR",
+        },
+    ]
+
+
+<section class="credermain">
+    <div class="container">
+        <div class="credermain-container">
+            <div class="credermain-mobiorder">
+                <span class="credermain-mobiorder-total">Order Total: <span class="credermain-mobiorder-value">120.00 EUR</span></span>
+                <div>
+                    <i class="fa-solid fa-bag-shopping credermain-mobiorder-icon"></i>
+                    <span class="credermain-mobiorder-detail">See Details</span>
+                </div>
+            </div>  
+            <div class="credermain-payment">
+                <span class="credermain-payment-title">Shipping Address</span>
+                <span class="credermain-payment-name">Check / Money order</span>
+                <div class="credermain-payment-check">
+                    <input type="checkbox" id="payment" name="payment" class="credermain-payment-checkbox">
+                    <label for="payment" class="credermain-payment-lable">My billing and shipping address are the same</label>
+                </div>
+                <span class="credermain-payment-user">Alex Driwer</span>
+                <span class="credermain-payment-address">Moskovski prospect 1/1, Apt. 123 Vitebsk, Vitebsk region 210038 Belarus</span>
+                <a href="tel:+375292169179" class="credermain-payment-phone">+375292169179</a>
+                <div class="credermain-payment-btn">
+                    <button type="submit" class="btn credermain-mobiorder-btn">Place Order</button>
+                    <button type="submit" class="btn credermain-back-btn">Back</button>
+                </div>
+                <span class="credermain-payment-discount">Apply Discount Code</span>
+                <div class="credermain-payment-input">
+                    <input type="text" placeholder="Enter discount code" class="credermain-input-code">
+                    <button type="submit" class="btn credermain-apply-btn">Apply</button>
+                </div>
+            </div>
+
+            <div class="credermain-dskorder">
+            include ../common/quickcontact
+                <div class="credermain-dskorder-main">
+                    <p class="credermain-dskorder-title">Order Summary</p>
+                    <div class="credermain-dskorder-total">
+                        <span class="credermain-dskorder-subtotal">Cart Subtotal<span class="dskorder-subtotal-value">$56.25</span></span>
+                        <span class="credermain-dskorder-shipping">Cart Subtotal<span class="dskorder-shipping-value">$5.00</span></span>
+                        <span class="credermain-dskorder-flat">Flat Rate - Fixed<span class="dskorder-flat-value"></span></span>
+                    </div>
+                    <div class="credermain-dskorder-ordtotal">
+                        <span class="credermain-dskorder-tmptotal">Order Total<span class="dskorder-subtotal-value">120.00 EUR</span></span>
+                        <button class="credermain-dskorder-tmpitem">
+                            <span class="credermain-dskorder-desc">1 Item in Cart</span>
+                            <div>
+                                <i class="fa-sharp fa-solid fa-chevron-up credermain-dskorder-up"></i>
+                                <i class="fa-sharp fa-solid fa-chevron-down credermain-dskorder-down"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="credermain-dskorder-itmlist">
+                        each item in rentalDataItem
+                            +item-card(item)
+                    </div>
+                </div>
+                <span class="credermain-dskorder-payment">Shipping Address:<span class="credermain-dskorder-edit"><i class="fa-solid fa-pencil credermain-dskorder-penicon"></i></span></span>
+                <p class="credermain-dskorder-user">Alex Driwer</p>
+                <p class="credermain-dskorder-address">Moskovski prospect 1/1, Apt. 123 Vitebsk, Vitebsk region 210038 Belarus</p>
+                <a href="tel:+375292169179" class="credermain-dskorder-phone">+375292169179</a>
+                <p class="credermain-dskorder-ship">Shipping Method:<span class="credermain-dskorder-edit"><i class="fa-solid fa-pencil credermain-dskorder-penicon"></i></span></p>
+                <p class="credermain-dskorder-desc">Flat Rate - Fixed</p>
+            </div>
+        </div>
+    </div>
+</section>

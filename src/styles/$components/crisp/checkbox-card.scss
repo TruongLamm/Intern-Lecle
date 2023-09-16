@@ -1,0 +1,45 @@
+.checkbox-card {
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: rem(10);
+        height: rem(10);
+        border: rem(1) solid $color-gray-11;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input[type="checkbox"]::after {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        font-size: rem(7);
+        color: $color-white-1;
+        display: none;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: $color-black-1;
+        border: rem(1) solid $color-black-1;
+    }
+
+    input[type="checkbox"]:checked + .card-name {
+        color: $color-black-1;
+    }
+
+    input[type="checkbox"]:checked::after {
+        display: block;
+    }
+
+    .card-name {
+        color: $color-black-3;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-align: left;
+    }
+}

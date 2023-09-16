@@ -1,0 +1,29 @@
+.btn {
+    font-family: $font-oswald;
+    font-size: rem(10);
+    font-weight: 600;
+    line-height: rem(15);
+    letter-spacing: rem(0.5);
+    text-transform: uppercase;
+
+    width: rem(85);
+    height: rem(32);
+    background-color: transparent;
+    border: rem(1.5) solid $color-black-1;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .btn {
+        font-size: rem(18);
+        font-weight: 500;
+        line-height: rem(27);
+
+        width: rem(175);
+        height: rem(56);
+        border: rem(2) solid $color-black-1;
+    }
+}

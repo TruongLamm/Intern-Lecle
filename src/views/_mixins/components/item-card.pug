@@ -1,0 +1,16 @@
+mixin item-card(values = {})
+    <div class="item-card">
+        <div class="card-main">
+            <img src=!{values.imgSrc} alt=!{values.imgAlt} class="card-image">
+            <div class="card-contents">
+                <span class="card-contents-title">!{values.title}</span>
+                <p class="card-contents-qty">!{values.qtyContent} <span class="card-contents-qtyvalue">!{values.qtyValue}</span></p>
+                <div class="card-contents-view">
+                    <span class="card-contents-detail">!{values.detail}</span>
+                    <i class="fa-sharp fa-solid fa-chevron-up card-contents-up"></i>
+                    <i class="fa-sharp fa-solid fa-chevron-down card-contents-down"></i>
+                </div>
+            </div>
+        </div>
+        <span class="card-price">!{values.price}</span>
+    </div>

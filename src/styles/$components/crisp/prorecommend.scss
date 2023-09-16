@@ -1,0 +1,79 @@
+.prorecommend-header {
+    margin-bottom: rem(10);
+}
+
+.prorecommend-title {
+    font-weight: $font-oswald;
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(34);
+}
+
+.prorecommend-directions {
+    display: none;
+}
+
+.prorecommend-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(18) rem(14);
+
+    .card-color-option {
+        display: none;
+    }
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .prorecommend-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: rem(30);
+    }
+
+    .prorecommend-title {
+        font-size: rem(24);
+    }
+
+    .prorecommend-directions {
+        display: inline-block;
+    }
+
+    .prorecommend-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: rem(2) solid $color-gray-12;
+        width: rem(40);
+        height: rem(40);
+    }
+
+    .direction-left,
+    .direction-right {
+        color: $color-gray-11;
+    }
+
+    .prorecommend-btn-left {
+        margin-right: rem(4);
+    }
+
+    .prorecommend-list {
+        display: grid;
+        justify-content: unset;
+        flex-wrap: nowrap;
+        grid-auto-flow: column;
+        grid-auto-columns: rem(344);
+        gap: 0 rem(27);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+
+        .product-card {
+            scroll-snap-align: start;
+        }
+    }
+}

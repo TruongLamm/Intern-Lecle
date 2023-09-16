@@ -1,0 +1,33 @@
+.artbanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artbanner-container {
+    height: rem(478);
+    background-image: url("/images/crisp/background-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artbanner-title {
+    width: rem(1242);
+    height: rem(100);
+    background-color: $color-white-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artbanner-content {
+    margin: 0;
+    font-family: $font-oswald;
+    font-size: rem(48);
+    font-weight: 400;
+    line-height: rem(34);
+    text-align: center;
+}

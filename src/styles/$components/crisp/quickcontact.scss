@@ -1,0 +1,46 @@
+.quickcontact-outside {
+    width: rem(35);
+    height: rem(104);
+    background-color: $color-black-1;
+    position: fixed;
+    top: rem(225);
+    right: 0;
+}
+
+.quickcontact-title {
+    font-family: $font-oswald;
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: rem(18);
+    letter-spacing: rem(0.5);
+    text-align: center;
+    color: $color-white-1;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.quickcontact-rotate {
+    -moz-transform: translateX(-22%) translateY(221%) rotate(-90deg);
+    -webkit-transform: translateX(-22%) translateY(221%) rotate(-90deg);
+    transform: translateX(-22%) translateY(221%) rotate(-90deg);
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .quickcontact-outside {
+        width: rem(40);
+        height: rem(200);
+        top: rem(349);
+    }
+
+    .quickcontact-title {
+        font-size: rem(14);
+        line-height: rem(20);
+    }
+
+    .quickcontact-rotate {
+        -moz-transform: translateX(-22%) translateY(425%) rotate(-90deg);
+        -webkit-transform: translateX(-22%) translateY(425%) rotate(-90deg);
+        transform: translateX(-22%) translateY(425%) rotate(-90deg);
+    }
+}

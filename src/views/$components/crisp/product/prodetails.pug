@@ -1,0 +1,211 @@
+-
+    const rentalDataProductColor = [
+        {
+            colorAttribute: "color3",
+        }, 
+        {
+            colorAttribute: "color4",
+        }, 
+        {
+            colorAttribute: "color5",
+        },
+    ]
+
+    const rentalDataProductSize = [
+        {
+            sizeValue: "osfa",
+        }, 
+        {
+            sizeValue: "w26",
+        }, 
+        {
+            sizeValue: "w27",
+        }, 
+        {
+            sizeValue: "w28",
+        }, 
+        {
+            sizeValue: "w29",
+        }, 
+        {
+            sizeValue: "w30",
+        }, 
+        {
+            sizeValue: "w31",
+            diagonalLine: "card-diagonal-line",
+        }, 
+        {
+            sizeValue: "w32",
+        }, 
+        {
+            sizeValue: "w33",
+            diagonalLine: "card-diagonal-line",
+        }, 
+        {
+            sizeValue: "w34",
+        }, 
+        {
+            sizeValue: "w35",
+        }, 
+        {
+            sizeValue: "w36",
+        }, 
+        {
+            sizeValue: "w38",
+        }, 
+        {
+            sizeValue: "w40",
+        }, 
+        {
+            sizeValue: "w42",
+        }, 
+        {
+            sizeValue: "w44",
+        }, 
+        {
+            sizeValue: "w46",
+        }, 
+        {
+            sizeValue: "w48",
+        }, 
+        {
+            sizeValue: "w50",
+            diagonalLine: "card-diagonal-line",
+        }, 
+        {
+            sizeValue: "w52",
+        }, 
+    ]
+
+<section class="prodetails">
+    <div class="container">
+        <div class="prodetails-container">
+            include ../home/breadcrumb
+            <div class="prodetails-left">
+                <div class="prodetails-slider">
+                    <div class="prodetails-slider-image">
+                        <img src="images/crisp/item-2.png" alt="item-2.png">
+                    </div>
+                    <div class="prodetails-slider-image">
+                        <img src="images/crisp/item-3.png" alt="item-3.png">
+                    </div>
+                    <div class="prodetails-slider-image">
+                        <img src="images/crisp/item-4.png" alt="item-4.png">
+                    </div>
+                </div>
+                <div class="prodetails-image-main">
+                    <div class="prodetails-image-display">
+                        <img src="images/crisp/item-5.png" alt="item-5.png" class="prodetails-image">
+                        <button type="submit" class="prodetails-image-zoom">
+                            <i class="fa-solid fa-maximize"></i>
+                            <span class="zoom-name">Zoom</span>
+                        </button>
+                    </div>
+                    <div class="prodetails-image-slider">
+                        include ../common/slider
+                        include ../common/slider
+                        include ../common/slider
+                        include ../common/slider
+                    </div>
+                    <div class="prodetails-image-social prodetails-image-dsksocial">
+                        <span class="prodetails-social-title">Share:</span>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="prodetails-right">
+                include ../home/breadcrumb
+                <div class="prodetails-header">
+                    <span class="prodetails-brand">Fendi</span>
+                    <p class="prodetails-title">Women Black Checked Fit and Flare Dress</p>
+                </div>
+                <div class="prodetails-color prodetails-color-dsktop">
+                    <span class="prodetails-color-title">Select color</span>
+                    <div class="prodetails-color-option">
+                        each item in rentalDataProductColor
+                            +color-card(item)
+                    </div>
+                </div> 
+                <div class="prodetails-spreverse">
+                    <div class="prodetails-size">
+                        <div class="prodetails-size-header">
+                            <span class="prodetails-size-title">Select size (Inches)</span>
+                            <a class="prodetails-size-guide"href="#">Size guide</a>
+                        </div>
+                        <div class="prodetails-toggle-size">
+                            <p class="prodetails-toggle-name">Osfa</p>
+                            <div>
+                                <i class="fa-sharp fa-solid fa-chevron-up prodetails-toggle-up"></i>
+                                <i class="fa-sharp fa-solid fa-chevron-down prodetails-toggle-down"></i>
+                            </div>
+                        </div>
+                        <div class="prodetails-size-list">
+                            each item in rentalDataProductSize
+                                +size-card(item)
+                        </div>
+                    </div>
+                    <div div class="prodetails-price">
+                        <div class="prodetails-quantity">
+                            <span class="prodetails-quantity-title">Quantity</span>
+                            <div class="prodetails-quantity-input">
+                                <button class="prodetails-quantity-btn"><i class="fa-solid fa-minus"></i></button>
+                                <input type="text" value="1" class="prodetails-quantity-display">
+                                <button class="prodetails-quantity-btn"><i class="fa-sharp fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="prodetails-tmptotal">
+                            <span class="prodetails-price-total">Price total</span>
+                            <span class="prodetails-price-value">90,00 <span class="prodetails-price-unit">EUR</span></span>
+                            <div class="prodetails-color prodetails-color-mobile">
+                                <span class="prodetails-color-title">Select color</span>
+                                <div class="prodetails-color-option">
+                                    each item in rentalDataProductColor
+                                        +color-card(item)
+                                    <div class="prodetails-color-slider">
+                                        <label class="prodetails-slider-ele" for="prodetails-slider-dot">...</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prodetails-button">
+                    <div class="prodetails-button-bag">
+                        <button type="submit" class="btn prodetails-bag-btn">Add to bag</button>
+                        <div class="prodetails-promotion">
+                            <div class="prodetails-promotion-free prodetails-promotion-deskfree">
+                                <i class="fa-sharp fa-solid fa-check"></i>
+                                <span>Free shipping</span>
+                            </div>
+                            <div class="prodetails-image-social prodetails-image-mobisocial">
+                                <span class="prodetails-social-title">Share:</span>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                            </div>
+                            <div class="prodetails-promotion-code">
+                                <span>Product code:</span>
+                                <span>RFKK1024</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="prodetails-button-save">    
+                        <button type="submit" class="btn prodetails-save-btn"><i class="fa-regular fa-heart"></i>  Save</button>
+                        <div class="prodetails-promotion-free prodetails-promotion-mobifree">
+                            <i class="fa-sharp fa-solid fa-check"></i>
+                            <span>Free shipping</span>
+                        </div>
+                        <div class="prodetails-tags">
+                            <span>Tags:</span>
+                            <span>New arrivals, Top women</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

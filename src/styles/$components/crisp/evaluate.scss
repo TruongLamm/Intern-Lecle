@@ -1,0 +1,36 @@
+.evaluate {
+    margin-top: rem(8);
+    background-color: $color-green-5;
+}
+
+.evaluate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: rem(218);
+}
+
+.evaluate-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(7);
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .evaluate {
+        margin-top: rem(39);
+        padding-left: 0;
+    }
+
+    .evaluate-container {
+        height: rem(100);
+    }
+
+    .evaluate-list {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,20 @@
+mixin product-card(values = {})
+    <div class="product-card">
+        <div class="card-main">
+            <img src=!{values.srcImage} alt=!{values.altImage} class="card-image">
+            <span class="card-discount">!{values.discount}</span>
+        </div>
+        <div class="card-content">
+            <span class="card-category">!{values.category}</span>
+            <span class="card-desc">!{values.desc}</span>
+            <div class="card-price">
+                <span class="card-price-present !{values.priceSale}">!{values.price}</span>
+                <span class="card-price-old">!{values.priceOld}</span>
+            </div>
+        </div>
+        <div class="card-color-option">
+            +color-card({}, `${values.colorAttribute1}`)
+            +color-card({}, `${values.colorAttribute2}`)
+            +color-card({}, `${values.colorAttribute3}`)
+        </div>
+    </div>  

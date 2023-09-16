@@ -1,0 +1,9 @@
+extends _layouts/layout-crisp
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Crisp";
+
+block container
+    include ./$components/crisp/create-order/status
+    include ./$components/crisp/create-order/credermain
+    include ./$components/crisp/home/evaluate

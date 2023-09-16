@@ -1,0 +1,82 @@
+.color-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(23);
+    height: rem(23);
+}
+
+.color-card label {
+    cursor: pointer;
+    width: rem(15);
+    height: rem(15);
+    background-color: $color-black-2;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.color-card label:hover {
+    background-clip: content-box;
+    border: rem(1) solid $color-black-1;
+    padding: rem(4);
+    width: rem(23);
+    height: rem(23);
+    margin: 0;
+}
+
+.color1 label {
+    background-color: $color-black-2;
+}
+.color2 label {
+    background-color: $color-gray-7;
+}
+.color3 label {
+    background-color: $color-green-1;
+}
+.color4 label {
+    background-color: $color-green-2;
+}
+.color5 label {
+    background-color: $color-purple-6;
+}
+.color6 label {
+    background-color: $color-gray-6;
+}
+.color7 label {
+    background-color: $color-gray-8;
+}
+.color8 label {
+    background-color: $color-red-1;
+}
+.color9 label {
+    background-color: $color-green-3;
+}
+.color10 label {
+    background-color: $color-brown-1;
+}
+.color11 label {
+    background-color: $color-pink-1;
+}
+.color12 label {
+    background-color: $color-green-4;
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .color-card {
+        width: rem(27);
+        height: rem(27);
+    }
+
+    .color-card label {
+        width: rem(17);
+        height: rem(17);
+    }
+
+    .color-card label:hover {
+        padding: rem(4);
+        width: rem(27);
+        height: rem(27);
+    }
+}

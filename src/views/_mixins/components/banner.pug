@@ -1,0 +1,12 @@
+mixin banner(values = {})
+    <div class="banner">
+        <div class="banner-background"></div>
+        <div class="banner-content">
+            <div class="banner-title">
+                <p class="banner-title-name">!{values.nameTitle}</p>
+                <p class="banner-title-desc">!{values.descTitle}</p>
+            </div>
+            +button(`${values.nameBtn}`)
+        </div>
+        <img src=!{values.srcImg} alt=!{values.srcAlt} class="banner-image">
+    </div>

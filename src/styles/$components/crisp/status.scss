@@ -1,0 +1,107 @@
+.status {
+    margin-bottom: rem(20);
+}
+
+.status-container {
+    display: flex;
+    justify-content: center;
+    column-gap: rem(40);
+}
+
+.status-shipping,
+.status-revpay {
+    font-family: $font-oswald;
+    font-size: rem(12);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: rem(31);
+    height: rem(31);
+    background-color: $color-white-1;
+}
+
+.status-shipping {
+    border: rem(6) solid $color-gray-12;
+}
+
+.status-revpay {
+    border: rem(6) solid $color-blue-3;
+}
+
+.status-shipping::before {
+    content: "";
+    width: rem(145);
+    height: rem(5);
+    background-color: $color-gray-12;
+    position: absolute;
+    z-index: -1;
+}
+
+.status-revpay::before {
+    content: "";
+    width: rem(145);
+    height: rem(5);
+    background-color: $color-blue-3;
+    position: absolute;
+    z-index: -1;
+}
+
+.status-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(3);
+    width: rem(105);
+}
+
+.status-shipping-desc,
+.status-revpay-desc {
+    font-family: $font-roboto;
+    font-size: rem(12);
+    font-weight: 400;
+    line-height: rem(20);
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .status {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: rem(30);
+    }
+
+    .status-container {
+        column-gap: rem(49);
+    }
+
+    .status-shipping,
+    .status-revpay {
+        font-size: rem(15);
+        line-height: rem(24);
+        width: rem(40);
+        height: rem(40);
+    }
+
+    .status-shipping::before {
+        width: rem(194);
+        height: rem(6);
+    }
+
+    .status-revpay::before {
+        width: rem(194);
+        height: rem(6);
+    }
+
+    .status-bar {
+        row-gap: rem(10);
+        width: rem(145);
+    }
+
+    .status-shipping-desc,
+    .status-revpay-desc {
+        font-size: rem(16);
+    }
+}

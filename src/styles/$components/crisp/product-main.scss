@@ -1,0 +1,11 @@
+.product-main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+// Screen: 1920 <= width
+@include mq($BREAKPOINT-DT-FULL) {
+    .product-main-container {
+        flex-direction: row;
+    }
+}
